@@ -13,6 +13,7 @@ Run with `uv run ffedge ...` (or `ffedge ...` inside the venv).
 | `ffedge status` | Current week, which games are final, how far each dataset goes |
 | `ffedge refresh` | Force re-download of current-season data (cache refreshes every 6h anyway) |
 | `ffedge whiteboard --roster` / `--players "A, B"` | Per-game Scheme / Trends / injury data sheet + projections, saved to `reports/` |
+| `ffedge graphic --roster` / `--players "A, B"` | Visual matchup cards (HTML): role charts, target/run maps, defense zone maps, coverage, rank edges; opens in browser |
 | `ffedge usage --players "A, B" [--weekly]` | Snap, target, air-yard, rush, red-zone shares and xFP, season vs last 4 |
 | `ffedge usage --risers` | Biggest recent role growth (waiver radar) |
 | `ffedge regression [--position WR] [--players ...]` | Points and TDs vs expected: buy-low and sell-high lists |
@@ -20,7 +21,7 @@ Run with `uv run ffedge ...` (or `ffedge ...` inside the venv).
 | `ffedge defense [--offense] [--position TE]` | Team defense/offense ranks or points allowed by position |
 | `ffedge backtest` | How the projection model did on last season |
 
-Slash commands in `.claude/commands/` wrap these into full workflows: `/whiteboard`, `/start-sit`, `/waivers`, `/trade`, `/update-scheme`.
+Slash commands in `.claude/commands/` wrap these into full workflows: `/whiteboard`, `/cards`, `/start-sit`, `/waivers`, `/trade`, `/update-scheme`.
 
 ## How to analyze
 

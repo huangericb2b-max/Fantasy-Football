@@ -19,6 +19,7 @@ Open the folder with `claude` and use:
 
 - `/whiteboard` - full Scheme / Trends / X-factors / Verdict breakdown for my roster
 - `/whiteboard Ja'Marr Chase, Colston Loveland` - same, for specific players
+- `/cards` - visual matchup cards with charts, opened in your browser
 - `/start-sit Player A vs Player B`
 - `/waivers <available players>`
 - `/trade I give X / I get Y`
@@ -30,6 +31,7 @@ Or just ask in plain English; `CLAUDE.md` and the project skill tell Claude how 
 
 ```bash
 uv run ffedge whiteboard --roster
+uv run ffedge graphic --roster          # visual matchup cards in your browser
 uv run ffedge usage --risers            # waiver radar
 uv run ffedge regression --position WR  # buy-low / sell-high
 uv run ffedge project --position RB --top 20
@@ -46,6 +48,7 @@ uv run ffedge backtest                  # how good is the model?
 | `ffedge/matchup.py` | Defense/offense profiles: EPA, pressure, blitz, box counts, coverage, points allowed |
 | `ffedge/project.py` | Gradient-boosted projection model with 80% ranges, plus backtest |
 | `ffedge/whiteboard.py` | Builds the per-game data sheet |
+| `ffedge/graphics.py` | Matchup cards: hand-built SVG charts in one HTML page |
 | `.claude/` | Slash commands, project skill, permissions |
 | `league.toml`, `roster.toml` | League settings and my roster |
 | `data/scheme_overrides.csv` | Current-season coverage rates from web sources |

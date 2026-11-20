@@ -8,7 +8,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import data, matchup, project, regression, usage, whiteboard
+from . import data, graphics, matchup, project, regression, usage, whiteboard
 from .config import ROOT, load_league, load_roster
 
 REPORTS = ROOT / "reports"
@@ -115,6 +115,20 @@ def cmd_whiteboard(args):
     print(f"\n[saved to {path.relative_to(ROOT)}]")
 
 
+def cmd_graphic(args):
+    names = _names(args)
+    if not names:
+        sys.exit("Give --players \"A, B\" or --roster (fill roster.toml first).")
+    ctx = data.week_context(args.season)
+    week = args.week or ctx["week"]
+    page = graphics.build_html(load_league(), names, args.season, week)
+    path = _save(page, f"cards_{ctx['season']}_wk{week}.html")
+    print(f"Saved {path}")
+    if not args.no_open:
+        import webbrowser
+        webbrowser.open(path.resolve().as_uri())
+
+
 def cmd_project(args):
     lg = load_league()
     ctx = data.week_context(args.season)
@@ -201,6 +215,11 @@ def main(argv: list[str] | None = None) -> None:
     p = add("whiteboard", cmd_whiteboard, "Scheme/Trends/X-factor data sheet per game")
     who(p)
     p.add_argument("--week", type=int)
+
+    p = add("graphic", cmd_graphic, "matchup cards with charts (HTML), opens in your browser")
+    who(p)
+    p.add_argument("--week", type=int)
+    p.add_argument("--no-open", action="store_true")
 
     p = add("project", cmd_project, "next-week projections with 80% ranges")
     who(p)

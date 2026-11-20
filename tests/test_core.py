@@ -38,3 +38,11 @@ def test_whiteboard_smoke():
     ctx = data.week_context()
     text = whiteboard.build(load_league(), ["Ja'Marr Chase"], ctx["season"], ctx["week"])
     assert "Whiteboard data sheet" in text
+
+
+def test_svg_helpers_render():
+    from ffedge import graphics
+    svg = graphics.svg_line([1, 2, 3], [("Snaps", [0.5, 0.6, float("nan")], "--series-1")], "t")
+    assert svg.startswith("<svg") and "polyline" in svg
+    grid = graphics.svg_grid(["a"], ["L"], {("a", "L"): ("#fff", "#000", "1", "x", "tip")}, "g")
+    assert "<title>tip</title>" in grid
