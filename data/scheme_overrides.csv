@@ -1,0 +1,4 @@
+# Current-season coverage by defense. nflverse has no 2026 man/zone or MOFO/MOFC data,
+# so fill these from a dated public source (Sharp Football coverage tables, FantasyPoints, etc.).
+# Rates are 0-1. Leave a team out rather than guessing. /whiteboard asks Claude to update this file.
+team,man_rate,zone_rate,mofc_rate,mofo_rate,blitz_rate,source,as_of

@@ -1,0 +1,11 @@
+# Your current roster. Update after every add/drop or trade.
+# Names must match nflverse display names (e.g. "Amon-Ra St. Brown").
+# `ffedge whiteboard --roster` and `ffedge project --roster` read this list.
+
+players = [
+    # "Jayden Daniels",
+    # "Terry McLaurin",
+]
+
+# Players you're watching on waivers or in trade talks.
+watchlist = []

@@ -1,0 +1,8 @@
+data/cache/
+data/models/
+reports/
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.claude/settings.local.json

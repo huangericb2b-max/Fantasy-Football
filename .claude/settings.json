@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run ffedge:*)",
+      "Bash(ffedge:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(uv sync:*)",
+      "WebSearch",
+      "WebFetch(domain:www.sharpfootballanalysis.com)",
+      "WebFetch(domain:www.nfl.com)",
+      "WebFetch(domain:www.espn.com)",
+      "WebFetch(domain:www.fantasylife.com)",
+      "WebFetch(domain:www.fantasypoints.com)",
+      "WebFetch(domain:walterfootball.com)"
+    ]
+  }
+}

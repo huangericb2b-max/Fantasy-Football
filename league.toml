@@ -1,0 +1,32 @@
+# League settings. Every command reads this file, so keep it current.
+# Eric's dynasty league on League Tycoon: 6 teams, full PPR.
+
+[league]
+name = "League Tycoon dynasty"
+platform = "League Tycoon"
+format = "dynasty"          # redraft | keeper | dynasty
+teams = 6
+team_name = "Aubrey Merchant"
+timezone = "America/New_York"
+
+[scoring]
+reception = 1.0
+rec_yard = 0.1
+rec_td = 6.0
+rush_yard = 0.1
+rush_td = 6.0
+pass_yard = 0.04             # VERIFY: 1 pt per 25 passing yards is the common default
+pass_td = 4.0                # VERIFY: set to 6.0 if passing TDs are worth 6 in your league
+interception = -2.0
+fumble_lost = -2.0
+two_point = 2.0
+
+[lineup]
+# Starting slots. VERIFY against League Tycoon.
+QB = 1
+RB = 2
+WR = 2
+TE = 1
+FLEX = 1                     # RB/WR/TE
+K = 0
+DST = 0
