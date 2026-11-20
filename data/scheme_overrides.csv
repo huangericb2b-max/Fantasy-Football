@@ -2,3 +2,5 @@
 # so fill these from a dated public source (Sharp Football coverage tables, FantasyPoints, etc.).
 # Rates are 0-1. Leave a team out rather than guessing. /whiteboard asks Claude to update this file.
 team,man_rate,zone_rate,mofc_rate,mofo_rate,blitz_rate,source,as_of
+ARI,0.108,0.812,0.336,0.601,,Sharp Football Analysis coverage schemes table (season unlabeled; page updated 2026-11-17),2026-11-17
+CHI,0.272,0.688,0.505,0.458,,Sharp Football Analysis coverage schemes table (season unlabeled; page updated 2026-11-17),2026-11-17
